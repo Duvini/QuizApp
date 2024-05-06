@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+        <data>
+            <variable
+                name="quiz"
+                type="com.example.quizgame.QuizGameFragment" />
+        </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/ImageStyle"
+            android:layout_width="match_parent"
+            android:layout_height="342dp"
+            android:src="@drawable/ques">
+
+        </ImageView>
+
+        <TextView
+            style="@style/MediumTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@{quiz.currentQuestion.theQuestion}"
+
+            android:textSize="28sp"
+            tools:text="Which is the Independence day of Bangladesh?" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/option1"
+                    style="@style/AnswerTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tv_border"
+                    android:text="@{quiz.answers[0]}"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    tools:text="Option1" />
+
+                <TextView
+                    android:id="@+id/option2"
+                    style="@style/AnswerTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tv_border"
+                    android:text="@{quiz.answers[1]}"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    tools:text="Option1" />
+
+                <TextView
+                    android:id="@+id/option3"
+                    style="@style/AnswerTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tv_border"
+                    android:text="@{quiz.answers[2]}"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    tools:text="Option1" />
+
+                <TextView
+                    android:id="@+id/option4"
+                    style="@style/AnswerTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tv_border"
+                    android:text="@{quiz.answers[3]}"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    tools:text="Option1" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+    </layout>

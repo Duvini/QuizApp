@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical">
+
+
+        <ImageView
+            style="@style/ImageStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/quiz_logo"
+
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/MediumTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </ScrollView>
+
+
+    </LinearLayout>
+    </layout>

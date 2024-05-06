@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".title">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/ImageStyle"
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+            android:src="@drawable/qui" />
+
+        <TextView
+            style="@style/BigTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/archivo_black"
+            android:text="Welcome!" />
+
+        <TextView
+            style="@style/BigTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/archivo_black"
+            android:text="Are You Ready" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:src="@drawable/quiz" />
+
+        <Button
+            android:id="@+id/btn_play"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/tv_borde2"
+            android:text="Play"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+</layout>

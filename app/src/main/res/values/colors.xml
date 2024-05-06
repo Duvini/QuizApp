@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF3D00</color>
+    <color name="colorPrimaryDark">#DD2C00</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name = "wrong_answer">#9E9E9E</color>
+    <color name="border">#FFBD59</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

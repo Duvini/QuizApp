@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="quizlost"
+            type="com.example.quizgame.QuizLost" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F5F5F5"
+            android:orientation="vertical"
+
+            >
+
+            <ImageView
+                style="@style/ImageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#F5F5F5"
+                android:src="@drawable/fails">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Your Score"
+                android:textSize="22sp"></TextView>
+
+            <TextView
+                android:id="@+id/txt_score"
+                style="@style/ScoreStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{quizlost.earnedScore}"
+                tools:text="100">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/yourwronganswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Your wrong answers - "
+                android:textSize="20sp"
+                android:visibility="gone"></TextView>
+
+
+            <TextView
+                android:id="@+id/txt_wrong_answer"
+                style="@style/WrongAnswersStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{quizlost.wrongAnswerText}"
+                android:visibility="gone"
+                tools:text="this is a wrong answer">
+
+            </TextView>
+
+
+            <Button
+                android:id="@+id/btn_try_again"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/tv_border"
+                android:text="Try Again"
+                android:textColor="@color/white">
+
+            </Button>
+
+        </LinearLayout>
+    </ScrollView>
+
+    </layout>

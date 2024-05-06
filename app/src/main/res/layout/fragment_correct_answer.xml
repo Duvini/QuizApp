@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".QuizWon">
+    <data>
+        <variable
+            name="quizwon"
+            type="com.example.quizgame.QuizWon" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F5F5F5"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/ImageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="297dp"
+                android:background="#F5F5F5"
+                android:src="@drawable/gift">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text="Your Score"
+                android:textSize="22sp"></TextView>
+
+            <TextView
+                android:id="@+id/txt_score"
+                style="@style/ScoreStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@{quizwon.earnedScore}"
+                tools:text="100">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/score_share"
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_share_black">
+
+            </ImageView>
+
+            <Button
+                android:id="@+id/btn_play_next"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="@color/white"
+                android:background="@drawable/tv_border"
+                android:text=" Play Next ">
+
+            </Button>
+
+            <TextView
+                android:id="@+id/yourwronganswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Your wrong answers - "
+                android:textSize="20sp"
+                android:visibility="gone"></TextView>
+
+
+            <TextView
+                android:id="@+id/txt_wrong_answer"
+                style="@style/WrongAnswersStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{quizwon.wrongAnswerText}"
+                android:visibility="gone"
+                tools:text="this is a wrong answer">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    </layout>

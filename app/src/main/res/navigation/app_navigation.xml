@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/title2">
+
+    <fragment
+        android:id="@+id/title2"
+        android:name="com.example.quizgame.title"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_title2_to_quizGameFragment"
+            app:destination="@id/quizGameFragment" />
+        <action
+            android:id="@+id/action_title2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizGameFragment"
+        android:name="com.example.quizgame.QuizGameFragment"
+        android:label="QuizGameFragment" >
+        <action
+            android:id="@+id/action_quizGameFragment_to_quizLost"
+            app:destination="@id/quizLost"
+            app:popUpTo="@id/quizGameFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizGameFragment_to_quizWon"
+            app:destination="@id/quizWon"
+            app:popUpTo="@id/quizGameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizLost"
+        android:name="com.example.quizgame.QuizLost"
+        android:label="QuizLost" >
+        <action
+            android:id="@+id/action_quizLost_to_title2"
+            app:destination="@id/title2"
+            app:popUpTo="@id/title2" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="wrongAnswers"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizWon"
+        android:name="com.example.quizgame.QuizWon"
+        android:label="fragment_correct_answer"
+        tools:layout="@layout/fragment_correct_answer" >
+        <action
+            android:id="@+id/action_quizWon_to_title2"
+            app:destination="@id/title2"
+            app:popUpTo="@id/title2" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="wrongAnswers"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.quizgame.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_title2"
+            app:destination="@id/title2" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.quizgame.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_title2"
+            app:destination="@id/title2" />
+    </fragment>
+</navigation>
